@@ -1,0 +1,1 @@
+# wp-ip-post-restrict
