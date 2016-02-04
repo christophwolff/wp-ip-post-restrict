@@ -9,7 +9,7 @@ Check a clients IP with `ipr_client_ip_is_allowed()`, for example:
 if (ipr_client_ip_is_allowed()) {
 	echo "You are allowed to see this.";
 } else {
-	echo "Nothing to see here, please move along."
+	echo "Nothing to see here, please move along.";
 }
 ?>
 ```
