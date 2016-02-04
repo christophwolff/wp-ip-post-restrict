@@ -65,14 +65,6 @@ function ipr_network_options_page_callback() {
     Your current IP: <code><?php echo ipr_get_client_ip(); ?></code>
   </div>
 
-  <div class="card">
-  <pre><?php 
-
-    echo (int) ipr_client_ip_is_allowed();
-
-    ?></pre>
-  </div>
-
 </div>
 <?php
 }
