@@ -30,4 +30,5 @@ add_action('plugins_loaded', 'ipr_load');
 function ipr_load() {
 	require_once 'inc/helper.php';
 	require_once 'inc/network.php';
+	require_once 'inc/postmeta.php';
 }
