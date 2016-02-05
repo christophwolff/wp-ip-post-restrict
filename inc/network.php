@@ -62,9 +62,8 @@ function ipr_network_options_page_callback() {
   </div>
 
   <div class="card">
-    Your current IP: <code><?php echo ipr_get_client_ip(); ?></code>
+    Your current IP <code><?php echo ipr_get_client_ip(); ?></code> <em>is <?php if (!ipr_client_ip_is_allowed()): ?><strong>not</strong><?php endif ?> part of the configured ranges</em>.
   </div>
-
 </div>
 <?php
 }

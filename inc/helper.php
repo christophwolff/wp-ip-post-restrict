@@ -21,9 +21,15 @@ function ipr_get_client_ip() {
 }
 
 function ipr_get_allowed_ips() {
-	$ips = get_site_option('ipr_network_option_ipranges', []);
+	$ips = get_site_option('ipr_network_option_ipranges', false);
+
+	if ($ips === false) {
+		return [];
+	}
+
 	$ips = explode("\n", $ips);
 	$ips = array_map(function($ip) { return trim($ip); }, $ips);
+
 	return $ips;
 }
 
