@@ -73,18 +73,6 @@ function ipr_client_ip_is_allowed() {
 function ipr_is_post_restricted( $postid ){
 
 	$is_restricted = get_post_meta(get_the_id(), 'hide-post-checkbox')[0];
-
-	switch ($is_restricted) {
-		case 'yes':
-			return true;
-			break;
-
-		case 'no':
-			return false;
-			break;
-
-		default:
-			return false;
-			break;
-	}
+	
+	return $is_restricted == 'yes';
 }
