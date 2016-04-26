@@ -3,7 +3,7 @@
  * Plugin Name: IP Post Restrict
  * Plugin URI:
  * Description: Restrict visibility of some posts to an IP range.
- * Version:     0.1
+ * Version:     0.2
  * Author:      Eric Teubert, Christoph Wolff
  * License:     MIT
  * License URI: license.txt

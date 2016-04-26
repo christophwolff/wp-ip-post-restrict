@@ -37,7 +37,7 @@ function ipr_network_admin_menu() {
  */
 function ipr_network_iprange_callback() { ?>
   <textarea name="ipr_network_option_ipranges" style="width: 100%" rows="6"><?php echo get_site_option('ipr_network_option_ipranges'); ?></textarea>
-  <span class="description">Whitelist IPs or IP ranges. Separate by newline. Example IP: <code>12.34.56.78</code>. Example IP Range: <code>12.34.56.*</code> or <code>12.34.*.*</code> </span>
+  <span class="description">Whitelist IPs or IP ranges. Separate by newline.<br>Example IP: <code>12.34.56.78</code>.<br>Example IP Range: <code>12.34.56.*</code> or <code>12.34.*.*</code> or <code>12.34.56.[33-62]</code> </span>
   <?php
 }
 

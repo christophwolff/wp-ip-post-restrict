@@ -43,11 +43,15 @@ function ipr_client_ip_is_allowed() {
 	$allowed_ips = ipr_get_allowed_ips();
 
 	$pattern_to_regex = function($p) {
+		$p = preg_replace_callback("|\[(\d+)-(\d+)\]|", function($matches) {
+			return "(" . implode("|", range($matches[1], $matches[2])) . ")";
+		}, $p); // allow ranges like [0-1] or [33-60]
 		$p = str_replace(".", "\.", $p); // turn dots into real dots
 		$p = str_replace("*", "\d{1,3}", $p); // wildcard to "1 to 3 digit number"
 		$p = '/^' . $p . '$/'; // make sure it's a complete match
 		return $p;
 	};
+
 
 	foreach ($allowed_ips as $ip) {
 		
