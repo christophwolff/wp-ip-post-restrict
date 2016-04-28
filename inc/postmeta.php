@@ -4,7 +4,7 @@
  * Adds a meta box (Checkbox) to the post editing screen
  */
 function ipr_hide_post_meta() {
-    add_meta_box( 'ipr_hide_post_meta', __( 'Hide Post', 'ipr-textdomain' ), 'ipr_meta_callback', 'post', 'side', 'high' );
+    add_meta_box( 'ipr_hide_post_meta', __( 'Hide Post', 'ipr-textdomain' ), 'ipr_meta_callback', array('post', 'corporateinsights'), 'side', 'high' );
 }
 add_action( 'add_meta_boxes', 'ipr_hide_post_meta' );
  
