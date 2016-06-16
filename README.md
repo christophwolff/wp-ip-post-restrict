@@ -6,7 +6,7 @@ Adds a Meta Checkbox to the posteditor to hide the post.
 
 Check with ipr_is_post_restricted(get_the_id()`, i.e.
 
-```
+```php
 
 <?php if (ipr_is_post_restricted(get_the_id())){
 
@@ -41,7 +41,7 @@ Warning: The client IP can be spoofed. Do not hide secure information using this
 
 Bringing it together i.e. in a loop:
 
-```
+```php
 <?php
 
 while ( $index_query->have_posts() ) : $index_query->the_post(); ?>
